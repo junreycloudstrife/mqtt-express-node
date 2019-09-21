@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>mows</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>MQTT</h1>
@@ -21,6 +22,9 @@
   Topic: <input id="sub-topic" value="cloud">
   <br>
   <button id="subscribe" onclick="subscribeFunc()">Subscribe</button>
+  <div>
+    <ul id="messages"></ul>
+  </div>
 </body>
 <script src="scripts/browser-mqtt.js"></script>
 <script src="scripts/controller.js"></script>
