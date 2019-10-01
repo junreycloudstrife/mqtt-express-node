@@ -1,6 +1,7 @@
 var app = require('express')();
 var express = require('express');
 var http = require('http').createServer(app);
+var port = process.env.PORT || 3000;
 // var mqtt = require('mqtt');
 
 app.get('/', function(req, res){
@@ -9,6 +10,6 @@ app.get('/', function(req, res){
 
 app.use(express.static('public'));
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(port, function(){
+  console.log('listening on *: ' + port);
 });
